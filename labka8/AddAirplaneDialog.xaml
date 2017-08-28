@@ -1,0 +1,37 @@
+﻿<Window x:Class="labka8.AddAirplaneDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labka8"
+        mc:Ignorable="d"
+        Title="AddAirplaneDialog" Height="300" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label x:Name="labelTitle"></Label>
+            <Label Margin="6">Марка самолета</Label>
+            <Label Margin="6">Грузоподъемность</Label>
+            <Label Margin="6">Количество пассажиров</Label>
+            <Label Margin="6">Топливный бак</Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label x:Name="LabelID"></Label>
+            <TextBox Margin="10" Text="{Binding ModelName}"></TextBox>
+            <TextBox Margin="10" Text="{Binding MaxCargo}" ></TextBox>
+            <TextBox Margin="10" Text="{Binding MaxPassengers}"></TextBox>
+            <TextBox Margin="10" Text="{Binding FuelTank}"></TextBox>
+        </StackPanel>
+        <WrapPanel Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Width="100" Margin="10" Click="Button_Click">OK</Button>
+            <Button Width="100" Margin="10" Click="Button_Click_1">Cancel</Button>
+        </WrapPanel>
+    </Grid>
+</Window>
