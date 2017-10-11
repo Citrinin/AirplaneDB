@@ -5,7 +5,8 @@ namespace Model
     public class Airplane:ViewModelBase
     {
 
-        private int airplaneID;
+	//nuclearAirplane        
+private int airplaneID;
 
         public int AirplaneID
         {
